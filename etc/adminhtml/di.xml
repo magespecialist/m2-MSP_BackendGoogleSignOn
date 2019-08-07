@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © MageSpecialist - Skeeller srl. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Backend\Controller\Adminhtml\Auth\Login">
+        <plugin sortOrder="1" name="msp_google_sign_on_authenticate_with_google"
+                type="MSP\GoogleSignOn\Plugin\AuthenticateWithGoogle"/>
+    </type>
+    <type name="Magento\User\Model\User">
+        <plugin sortOrder="1" name="msp_google_sign_on_deny_login_by_domain_rule"
+                type="MSP\GoogleSignOn\Plugin\DenyLoginByDomainRule"/>
+    </type>
+</config>

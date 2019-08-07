@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © MageSpecialist - Skeeller srl. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \MSP\GoogleSignOn\ViewModel\GoogleSignOn $googleSignOnViewModel */
+$googleSignOnViewModel = $block->getGoogleSignOnViewModel();
+?>
+<button id="msp-google-backend-sign-on" type="button" class="action-google-login">
+    <span>
+        <img width="18" height="18" src="<?= $block->getViewFileUrl('MSP_GoogleSignOn::images/google.png') ?>" />
+        <?= __('Google Login') ?>
+    </span>
+</button>
+
+<script type="text/javascript">
+require(['jquery'], function ($) {
+    $('#msp-google-backend-sign-on')
+        .appendTo('.form-actions .actions')
+        .click(function () {
+            self.location.href="<?= /* @noEscape */ $googleSignOnViewModel->getAuthUrl() ?>";
+        });
+});
+</script>
