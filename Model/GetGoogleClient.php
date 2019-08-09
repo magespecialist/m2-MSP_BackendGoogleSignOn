@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Model;
+namespace MSP\BackendGoogleSignOn\Model;
 
 use Google_Client;
 use Magento\Backend\Model\UrlInterface;
@@ -17,12 +17,12 @@ class GetGoogleClient
     /**
      * Client ID XML path
      */
-    private const XML_PATH_CLIENT_ID = 'msp_google_sign_on/general/client_id';
+    private const XML_PATH_CLIENT_ID = 'msp_backend_google_sign_on/general/client_id';
 
     /**
      * Client secret XML path
      */
-    private const XML_PATH_CLIENT_SECRET = 'msp_google_sign_on/general/client_secret';
+    private const XML_PATH_CLIENT_SECRET = 'msp_backend_google_sign_on/general/client_secret';
 
     /**
      * @var GoogleClientFactory

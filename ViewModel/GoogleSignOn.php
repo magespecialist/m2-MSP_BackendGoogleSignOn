@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\ViewModel;
+namespace MSP\BackendGoogleSignOn\ViewModel;
 
 use Magento\Framework\View\Element\Block\ArgumentInterface;
-use MSP\GoogleSignOn\Model\GetGoogleClient;
+use MSP\BackendGoogleSignOn\Model\GetGoogleClient;
 
 class GoogleSignOn implements ArgumentInterface
 {

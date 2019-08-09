@@ -6,14 +6,14 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Model;
+namespace MSP\BackendGoogleSignOn\Model;
 
 use Google_Service_Oauth2_Userinfoplus;
 use Magento\Framework\Exception\AlreadyExistsException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\User\Model\ResourceModel\User as UserResource;
 use Magento\User\Model\UserFactory;
-use MSP\GoogleSignOn\Model\ResourceModel\GetUsernameByEmail;
+use MSP\BackendGoogleSignOn\Model\ResourceModel\GetUsernameByEmail;
 
 class CreateUserFromGoogleUserInfo
 {

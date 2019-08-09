@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Model\ResourceModel;
+namespace MSP\BackendGoogleSignOn\Model\ResourceModel;
 
 use Magento\Framework\App\ResourceConnection;
 use Magento\Framework\Exception\NoSuchEntityException;

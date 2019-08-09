@@ -10,14 +10,14 @@
 	<body>
 		<referenceContainer name="form.buttons">
 			<block
-				name="msp_google_sign_on"
-				template="MSP_GoogleSignOn::google_sign_on.phtml"
+				name="msp_backend_google_sign_on"
+				template="MSP_BackendGoogleSignOn::google_sign_on.phtml"
 				after="adminhtml_auth_login_buttons"
-				ifconfig="msp_google_sign_on/general/enabled"
+				ifconfig="msp_backend_google_sign_on/general/enabled"
 			>
 				<arguments>
 					<argument name="google_sign_on_view_model"
-							  xsi:type="object">MSP\GoogleSignOn\ViewModel\GoogleSignOn</argument>
+							  xsi:type="object">MSP\BackendGoogleSignOn\ViewModel\GoogleSignOn</argument>
 				</arguments>
 			</block>
 		</referenceContainer>

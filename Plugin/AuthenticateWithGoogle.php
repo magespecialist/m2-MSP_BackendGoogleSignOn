@@ -6,17 +6,17 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Plugin;
+namespace MSP\BackendGoogleSignOn\Plugin;
 
 use Exception;
 use Magento\Backend\Controller\Adminhtml\Auth\Login;
 use Magento\Backend\Model\Auth\Session;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\Event\ManagerInterface;
-use MSP\GoogleSignOn\Model\AuthenticateByEmail;
-use MSP\GoogleSignOn\Model\CreateUserFromGoogleUserInfo;
-use MSP\GoogleSignOn\Model\GetGoogleUserInfo;
-use MSP\GoogleSignOn\Model\IsEnabled;
+use MSP\BackendGoogleSignOn\Model\AuthenticateByEmail;
+use MSP\BackendGoogleSignOn\Model\CreateUserFromGoogleUserInfo;
+use MSP\BackendGoogleSignOn\Model\GetGoogleUserInfo;
+use MSP\BackendGoogleSignOn\Model\IsEnabled;
 
 class AuthenticateWithGoogle
 {

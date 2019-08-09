@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Model;
+namespace MSP\BackendGoogleSignOn\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
@@ -15,7 +15,7 @@ class IsEnabled
     /**
      * XML path to enabled flag
      */
-    private const XML_PATH_ENABLED = 'msp_google_sign_on/general/enabled';
+    private const XML_PATH_ENABLED = 'msp_backend_google_sign_on/general/enabled';
 
     /**
      * @var ScopeConfigInterface

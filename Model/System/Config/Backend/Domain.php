@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Model\System\Config\Backend;
+namespace MSP\BackendGoogleSignOn\Model\System\Config\Backend;
 
 use Magento\Framework\App\Cache\TypeListInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;

@@ -7,13 +7,13 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Test\Integration;
+namespace MSP\BackendGoogleSignOn\Test\Integration;
 
 use Google_Service_Oauth2_Userinfoplus;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\User\Model\User;
-use MSP\GoogleSignOn\Model\CreateUserFromGoogleUserInfo;
-use MSP\GoogleSignOn\Model\ResourceModel\GetUsernameByEmail;
+use MSP\BackendGoogleSignOn\Model\CreateUserFromGoogleUserInfo;
+use MSP\BackendGoogleSignOn\Model\ResourceModel\GetUsernameByEmail;
 use PHPUnit\Framework\TestCase;
 use Magento\TestFramework\Helper\Bootstrap;
 
@@ -62,7 +62,7 @@ class CreateUserFromGoogleUserInfoTest extends TestCase
     }
 
     /**
-     * @magentoAdminConfigFixture msp_google_sign_on/advanced/domain_rules {"1":{"domain":"mydomain.com","rule":"force"}, "2":{"domain":"mydomain2.com","rule":"force"}, "3":{"domain":"mydomain3.com","rule":"1"}}
+     * @magentoAdminConfigFixture msp_backend_google_sign_on/advanced/domain_rules {"1":{"domain":"mydomain.com","rule":"force"}, "2":{"domain":"mydomain2.com","rule":"force"}, "3":{"domain":"mydomain3.com","rule":"1"}}
      */
     public function testShouldCreateNewUser(): void
     {
@@ -83,7 +83,7 @@ class CreateUserFromGoogleUserInfoTest extends TestCase
     }
 
     /**
-     * @magentoAdminConfigFixture msp_google_sign_on/advanced/domain_rules {"1":{"domain":"mydomain.com","rule":"force"}, "2":{"domain":"mydomain2.com","rule":"force"}, "3":{"domain":"mydomain3.com","rule":"1"}}
+     * @magentoAdminConfigFixture msp_backend_google_sign_on/advanced/domain_rules {"1":{"domain":"mydomain.com","rule":"force"}, "2":{"domain":"mydomain2.com","rule":"force"}, "3":{"domain":"mydomain3.com","rule":"1"}}
      */
     public function testShouldNotCreateNewUserWithADomainRule(): void
     {
@@ -100,7 +100,7 @@ class CreateUserFromGoogleUserInfoTest extends TestCase
     }
 
     /**
-     * @magentoAdminConfigFixture msp_google_sign_on/advanced/domain_rules {"1":{"domain":"mydomain.com","rule":"force"}, "2":{"domain":"mydomain2.com","rule":"force"}, "3":{"domain":"mydomain3.com","rule":"1"}}
+     * @magentoAdminConfigFixture msp_backend_google_sign_on/advanced/domain_rules {"1":{"domain":"mydomain.com","rule":"force"}, "2":{"domain":"mydomain2.com","rule":"force"}, "3":{"domain":"mydomain3.com","rule":"1"}}
      */
     public function testShouldNotCreateNewUserWithoutADomainRule(): void
     {

@@ -6,14 +6,14 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Model;
+namespace MSP\BackendGoogleSignOn\Model;
 
 use Magento\Backend\Model\Auth\Session;
 use Magento\Framework\Event\ManagerInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Security\Model\AdminSessionsManager;
 use Magento\User\Model\User;
-use MSP\GoogleSignOn\Model\ResourceModel\GetUsernameByEmail;
+use MSP\BackendGoogleSignOn\Model\ResourceModel\GetUsernameByEmail;
 
 class AuthenticateByEmail
 {

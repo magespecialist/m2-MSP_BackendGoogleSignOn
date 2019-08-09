@@ -9,11 +9,11 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
     <type name="Magento\Backend\Controller\Adminhtml\Auth\Login">
-        <plugin sortOrder="1" name="msp_google_sign_on_authenticate_with_google"
-                type="MSP\GoogleSignOn\Plugin\AuthenticateWithGoogle"/>
+        <plugin sortOrder="1" name="msp_backend_google_sign_on_authenticate_with_google"
+                type="MSP\BackendGoogleSignOn\Plugin\AuthenticateWithGoogle"/>
     </type>
     <type name="Magento\User\Model\User">
-        <plugin sortOrder="1" name="msp_google_sign_on_deny_login_by_domain_rule"
-                type="MSP\GoogleSignOn\Plugin\DenyLoginByDomainRule"/>
+        <plugin sortOrder="1" name="msp_backend_google_sign_on_deny_login_by_domain_rule"
+                type="MSP\BackendGoogleSignOn\Plugin\DenyLoginByDomainRule"/>
     </type>
 </config>

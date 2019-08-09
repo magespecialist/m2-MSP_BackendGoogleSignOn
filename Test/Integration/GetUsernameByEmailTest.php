@@ -7,10 +7,10 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Test\Integration;
+namespace MSP\BackendGoogleSignOn\Test\Integration;
 
 use Magento\Framework\Exception\NoSuchEntityException;
-use MSP\GoogleSignOn\Model\ResourceModel\GetUsernameByEmail;
+use MSP\BackendGoogleSignOn\Model\ResourceModel\GetUsernameByEmail;
 use PHPUnit\Framework\TestCase;
 use Magento\TestFramework\Helper\Bootstrap;
 

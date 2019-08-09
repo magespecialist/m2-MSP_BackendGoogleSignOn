@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Model;
+namespace MSP\BackendGoogleSignOn\Model;
 
 use Magento\Store\Model\StoreManagerInterface;
 

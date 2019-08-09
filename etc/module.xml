@@ -7,7 +7,7 @@
  -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="MSP_GoogleSignOn">
+    <module name="MSP_BackendGoogleSignOn">
         <sequence>
             <module name="Magento_User"/>
 

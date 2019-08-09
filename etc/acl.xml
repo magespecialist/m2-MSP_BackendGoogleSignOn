@@ -14,7 +14,7 @@
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
                             <resource
-                                    id="MSP_GoogleSignOn::config"
+                                    id="MSP_BackendGoogleSignOn::config"
                                     title="MSP Google Backend Sign On"
                                     translate="title"
                                     sortOrder="40" />

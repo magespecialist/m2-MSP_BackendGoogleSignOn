@@ -6,12 +6,12 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Plugin;
+namespace MSP\BackendGoogleSignOn\Plugin;
 
 use Magento\Framework\Exception\LocalizedException;
 use Magento\User\Model\User;
-use MSP\GoogleSignOn\Model\GetDomainRule;
-use MSP\GoogleSignOn\Model\IsEnabled;
+use MSP\BackendGoogleSignOn\Model\GetDomainRule;
+use MSP\BackendGoogleSignOn\Model\IsEnabled;
 
 class DenyLoginByDomainRule
 {

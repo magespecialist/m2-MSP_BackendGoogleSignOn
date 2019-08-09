@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Test\Integration;
+namespace MSP\BackendGoogleSignOn\Test\Integration;
 
-use MSP\GoogleSignOn\Model\GetDomainRule;
+use MSP\BackendGoogleSignOn\Model\GetDomainRule;
 use PHPUnit\Framework\TestCase;
 use Magento\TestFramework\Helper\Bootstrap;
 
@@ -47,7 +47,7 @@ class GetDomainRuleTest extends TestCase
      * @param string $emailOrDomain
      * @param string|null $rule
      * @dataProvider getDomainRuleDataProvider
-     * @magentoAdminConfigFixture msp_google_sign_on/advanced/domain_rules {"1":{"domain":"mydomain.com","rule":"force"}, "2":{"domain":"mydomain2.com","rule":"force"}, "3":{"domain":"mydomain3.com","rule":"1"}}
+     * @magentoAdminConfigFixture msp_backend_google_sign_on/advanced/domain_rules {"1":{"domain":"mydomain.com","rule":"force"}, "2":{"domain":"mydomain2.com","rule":"force"}, "3":{"domain":"mydomain3.com","rule":"1"}}
      */
     public function testShouldGetDomainRule(string $emailOrDomain, ?string $rule): void
     {

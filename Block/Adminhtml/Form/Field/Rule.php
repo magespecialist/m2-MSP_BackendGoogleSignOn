@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace MSP\GoogleSignOn\Block\Adminhtml\Form\Field;
+namespace MSP\BackendGoogleSignOn\Block\Adminhtml\Form\Field;
 
 use Magento\Authorization\Model\ResourceModel\Role;
 use Magento\Authorization\Model\ResourceModel\Role\CollectionFactory;

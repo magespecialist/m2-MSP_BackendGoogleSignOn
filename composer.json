@@ -1,12 +1,12 @@
 {
-    "name": "msp/module-backend-sign-on",
-    "description": "Google Sign On libraries for Magento 2",
+    "name": "msp/module-backend-google-sign-on",
+    "description": "Backend Google Sign On for Magento 2",
     "require": {
         "php": "~7.2.0 || ~7.3.0",
         "magento/magento2-base": "^2.3",
         "magento/module-backend": "*",
         "magento/module-user": "*",
-        "google/client": "^2.2.0"
+        "google/apiclient": "^2.2.0"
     },
     "support": {
         "issues": "https://github.com/magespecialist/m2-GoogleSignOn/issues"
@@ -35,7 +35,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "MSP\\GoogleSignOn\\": ""
+            "MSP\\BackendGoogleSignOn\\": ""
         }
     }
 }
