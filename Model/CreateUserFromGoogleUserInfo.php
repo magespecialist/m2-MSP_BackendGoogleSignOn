@@ -86,8 +86,8 @@ class CreateUserFromGoogleUserInfo
         }
 
         $user = $this->userFactory->create();
-        $user->setFirstname($userInfo->getGivenName());
-        $user->setLastname($userInfo->getFamilyName());
+        $user->setFirstname($userInfo->getGivenName() ?: 'Google');
+        $user->setLastname($userInfo->getFamilyName() ?: 'User');
         $user->setUsername($userInfo->getEmail());
         $user->setPassword(md5(uniqid((string) time(), true)));
         $user->setEmail($userInfo->getEmail());

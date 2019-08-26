@@ -81,6 +81,7 @@ class GetGoogleClient
             $clientSecret = $this->scopeConfig->getValue(self::XML_PATH_CLIENT_SECRET) ?: '';
 
             $redirectUrl = $this->url->getUrl('adminhtml');
+            $redirectUrl = preg_replace('|/key/.+|', '', $redirectUrl);
 
             $this->googleClient->setApplicationName($this->getApplicationName->execute());
             $this->googleClient->setClientId($clientId);
