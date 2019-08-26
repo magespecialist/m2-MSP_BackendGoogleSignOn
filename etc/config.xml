@@ -10,7 +10,7 @@
     <default>
         <msp_backend_google_sign_on>
             <general>
-                <enabled>1</enabled>
+                <enabled>0</enabled>
                 <client_id></client_id>
                 <client_secret></client_secret>
             </general>
