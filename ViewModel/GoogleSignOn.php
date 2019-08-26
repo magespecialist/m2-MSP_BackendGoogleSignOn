@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Copyright © MageSpecialist - Skeeller srl. All rights reserved.
  * See COPYING.txt for license details.
