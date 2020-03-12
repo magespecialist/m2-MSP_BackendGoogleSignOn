@@ -96,28 +96,32 @@ class AuthenticateWithGoogle
      */
     public function beforeExecute(Login $subject): void
     {
-        if ($this->isEnabled->execute()) {
-            $authCode = $this->request->getParam('code', '');
-            if (!empty($authCode)) {
-                try {
-                    $googleUserInfo = $this->getGoogleUserInfo->execute($authCode);
-                    $this->createUserFromGoogleUserInfo->execute($googleUserInfo);
+        if (!$this->isEnabled->execute()) {
+            return;
+        }
 
-                    $this->authenticateByEmail->execute($googleUserInfo->getEmail());
+        $authCode = $this->request->getParam('code', '');
+        if (empty($authCode)) {
+            return;
+        }
 
-                    $this->eventManager->dispatch(
-                        'backend_auth_user_login_success',
-                        ['user' => $this->authSession]
-                    );
-                } catch (Exception $e) {
-                    $this->eventManager->dispatch(
-                        'backend_auth_user_login_failed',
-                        ['user_name' => '', 'exception' => $e]
-                    );
+        try {
+            $googleUserInfo = $this->getGoogleUserInfo->execute($authCode);
+            $this->createUserFromGoogleUserInfo->execute($googleUserInfo);
 
-                    $this->messageManager->addErrorMessage($e->getMessage());
-                }
-            }
+            $this->authenticateByEmail->execute($googleUserInfo->getEmail());
+
+            $this->eventManager->dispatch(
+                'backend_auth_user_login_success',
+                ['user' => $this->authSession]
+            );
+        } catch (Exception $e) {
+            $this->eventManager->dispatch(
+                'backend_auth_user_login_failed',
+                ['user_name' => '', 'exception' => $e]
+            );
+
+            $this->messageManager->addErrorMessage($e->getMessage());
         }
     }
 }
