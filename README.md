@@ -5,6 +5,10 @@ This is a Magento 2 extension that allows to authenticate into Magento 2 Admin P
 Install the extension through composer:
 
     composer require msp/module-backend-google-sign-on
+    
+Once Composer finishes installing the dependencies, run:
+
+    bin/magento setup:upgrade
 
 ## Configuration
 After the module is installed, authenticate into Admin Panel and go to `STORES > Settings > Configuration > SECURITY > Google Backend Sign On`.
