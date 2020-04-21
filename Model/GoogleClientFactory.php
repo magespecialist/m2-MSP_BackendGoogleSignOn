@@ -19,6 +19,6 @@ class GoogleClientFactory
      */
     public function create(): Google_Client
     {
-        return new Google_Client();
+        return new Google_Client(['approval_prompt' => 'force']);
     }
 }
