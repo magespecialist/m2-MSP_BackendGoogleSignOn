@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace MSP\BackendGoogleSignOn\Model;
 
-use Google_Service_Oauth2_Userinfoplus;
+use Google_Service_Oauth2_Userinfo;
 use Magento\Framework\Exception\AlreadyExistsException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\User\Model\ResourceModel\User as UserResource;
@@ -74,10 +74,10 @@ class CreateUserFromGoogleUserInfo
     /**
      * Create a new admin user if not exists based on google info
      *
-     * @param Google_Service_Oauth2_Userinfoplus $userInfo
+     * @param Google_Service_Oauth2_Userinfo $userInfo
      * @throws AlreadyExistsException
      */
-    public function execute(Google_Service_Oauth2_Userinfoplus $userInfo): void
+    public function execute(Google_Service_Oauth2_Userinfo $userInfo): void
     {
         $rule = $this->getDomainRule->execute($userInfo->getHd());
 
