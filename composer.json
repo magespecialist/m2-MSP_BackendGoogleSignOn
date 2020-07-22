@@ -6,7 +6,7 @@
         "magento/magento2-base": "^2.3",
         "magento/module-backend": "*",
         "magento/module-user": "*",
-        "google/apiclient": "^2.4"
+        "google/apiclient": "2.6.*"
     },
     "support": {
         "issues": "https://github.com/magespecialist/m2-GoogleSignOn/issues"
