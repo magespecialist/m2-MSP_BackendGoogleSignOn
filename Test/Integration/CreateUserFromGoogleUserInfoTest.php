@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace MSP\BackendGoogleSignOn\Test\Integration;
 
-use Google_Service_Oauth2_Userinfoplus;
+use Google_Service_Oauth2_Userinfo;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\User\Model\User;
 use MSP\BackendGoogleSignOn\Model\CreateUserFromGoogleUserInfo;
@@ -66,7 +66,7 @@ class CreateUserFromGoogleUserInfoTest extends TestCase
      */
     public function testShouldCreateNewUser(): void
     {
-        $googleInfo = new Google_Service_Oauth2_Userinfoplus();
+        $googleInfo = new Google_Service_Oauth2_Userinfo();
         $googleInfo->setGivenName('John');
         $googleInfo->setFamilyName('Doe');
         $googleInfo->setEmail('some@mydomain3.com');
@@ -87,7 +87,7 @@ class CreateUserFromGoogleUserInfoTest extends TestCase
      */
     public function testShouldNotCreateNewUserWithADomainRule(): void
     {
-        $googleInfo = new Google_Service_Oauth2_Userinfoplus();
+        $googleInfo = new Google_Service_Oauth2_Userinfo();
         $googleInfo->setGivenName('John');
         $googleInfo->setFamilyName('Doe');
         $googleInfo->setEmail('some@mydomain.com');
@@ -104,7 +104,7 @@ class CreateUserFromGoogleUserInfoTest extends TestCase
      */
     public function testShouldNotCreateNewUserWithoutADomainRule(): void
     {
-        $googleInfo = new Google_Service_Oauth2_Userinfoplus();
+        $googleInfo = new Google_Service_Oauth2_Userinfo();
         $googleInfo->setGivenName('John');
         $googleInfo->setFamilyName('Doe');
         $googleInfo->setEmail('some@gmail.com');

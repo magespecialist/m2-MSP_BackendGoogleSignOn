@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace MSP\BackendGoogleSignOn\Model;
 
-use Google_Service_Oauth2_Userinfoplus;
+use Google_Service_Oauth2_Userinfo;
 use Magento\Framework\Exception\LocalizedException;
 
 /**
@@ -42,10 +42,10 @@ class GetGoogleUserInfo
      * Authenticate through the Google Auth code response
      *
      * @param string $authCode
-     * @return Google_Service_Oauth2_Userinfoplus
+     * @return Google_Service_Oauth2_Userinfo
      * @throws LocalizedException
      */
-    public function execute(string $authCode): Google_Service_Oauth2_Userinfoplus
+    public function execute(string $authCode): Google_Service_Oauth2_Userinfo
     {
         $googleClient = $this->getGoogleClient->execute();
 
